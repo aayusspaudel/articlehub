@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Article Site</title>
+  <link rel="stylesheet" href="article.css">
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<body>
+
+ <nav>
+    <a href="#">Home</a>
+    <a href="#articles">Publish</a>
+    <a href="aboutarc.html">About</a>
+    <a href="#articles">Articles</a>
+    <a href="contactart.html">Contact</a><button id="myBtn">BG</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Welcome to My Article Hub</h1>
+    <p>Your place to <b>write, share, and inspire</b> the world.</p>
+    <a href="#articles" class="btn">✍️ Publish Now</a>
+  </header>
+
+  <div class="container">
+    <!-- Article Form -->
+    <form id="articleForm">
+      <h2>Publish a New Article</h2>
+      <input type="text" id="title" placeholder="Enter title" required>
+      <textarea id="content" rows="5" placeholder="Write your article..." required></textarea>
+      <button id="publish" type="submit">Publish</button>
+    </form>
+    <!-- Articles will appear here -->
+    <div id="articles">
+      <div class="article">
+        <h2>Welcome to Article Hub</h2>
+        <p>This is a sample article. Write and publish your own using the form above!</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <h2>Made with love by Ayush</h2>
+  </footer>
+</body>
+<script>
+$(document).ready(function() {
+  // When the button with id="myBtn" is clicked
+  $("#myBtn").click(function() {
+    // Toggle (add/remove) a CSS class called "bg-color" on the body
+    $("body").toggleClass("bg-color");
+  });
+});
+
+</script>
+<script src="article.js"></script>
+</html>
